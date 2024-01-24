@@ -1,1 +1,11 @@
 # mongo-db-k8
+- Mongo DB and Mongo Express deployment on Kubernetes
+- Kubernetes resources used:
+    - ConfigMap (for db connection URL)
+    - Secret (for db username and password)
+    - ConfigMap (for mongodb env variables)
+    - MongoDB deployment and replicaset
+    - Mongo-Express deployment and replicaset
+    - Internal service with cluster IP for monngodb(mongodb <---> mongo-express connection)
+    - Internal service with cluster IP for monngo-express(mongo-express <---> mongo-db connection)
+    - External IP(Loadbalancer) with Node Port(browser <---> mongo-express)
